@@ -27,9 +27,7 @@ public class MainActivity extends Activity{
 				String strX = mEdit1.getText().toString();
 				int loop = Integer.parseInt(strX);
 				
-				for (int i = 1; i < loop; i ++){
-					
-					
+				for (int i = 1; i <= loop; i ++){
 					// ここから
 					
 					if ((i % 3) == 0 && (i % 5) == 0){
@@ -45,8 +43,8 @@ public class MainActivity extends Activity{
 						mText1.setText(Integer.toString(i));
 					}
 					//ここまで出力方法不明
-					
-					
+					//32を入力して実行した場合32のみ表示
+					//3を〃場合Fizzのみ表示
 				}
 			}
 		});
