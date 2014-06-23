@@ -26,25 +26,22 @@ public class MainActivity extends Activity{
 			public void onClick(View v) {
 				String strX = mEdit1.getText().toString();
 				int loop = Integer.parseInt(strX);
-				
+				String str = "";
 				for (int i = 1; i <= loop; i ++){
-					// ここから
 					
 					if ((i % 3) == 0 && (i % 5) == 0){
-						mText1.setText("FizzBizz");
+						str = str + "FizzBuzz ";
 					}
 					else if ((i % 3) == 0){
-						mText1.setText("Fizz");
+						str = str + "Fizz ";
 					}
-					else if((i % 5) == 0){
-						mText1.setText("Bizz");
+					else if ((i % 5) == 0){
+						str = str + "Buzz ";
 					}
 					else{
-						mText1.setText(Integer.toString(i));
+						str = str + i + " ";
 					}
-					//ここまで出力方法不明
-					//32を入力して実行した場合32のみ表示
-					//3を〃場合Fizzのみ表示
+					mText1.setText(str);
 				}
 			}
 		});
